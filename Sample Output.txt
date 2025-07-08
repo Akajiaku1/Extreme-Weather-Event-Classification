@@ -1,0 +1,36 @@
+Generating 1000 days of synthetic weather data...
+Dataset saved to 'data/extreme_weather_dataset.csv'
+
+Dataset sample:
+   temperature  humidity  precipitation  wind_speed  soil_moisture  event
+0    25.993428  45.98578       6.712128   13.982876      50.000000      0
+1    21.871264  41.42504       4.862077   13.257730      51.000000      0
+2    22.026080  39.05093       5.379845   15.298436      51.800000      0
+3    23.091165  42.26727       5.721508   14.985210      52.440000      0
+4    22.593538  42.79885       5.465705   15.691126      53.152000      0
+
+Event distribution:
+Normal Weather    850
+Heatwave           31
+Flood              30
+Coldwave           29
+Drought            29
+Wildfire           31
+Name: event, dtype: int64
+
+Training classification model...
+Classification Report:
+                precision    recall  f1-score   support
+
+Normal Weather       0.95      0.99      0.97       170
+     Heatwave       0.94      0.84      0.89        31
+     Coldwave       0.90      0.86      0.88        29
+        Flood       0.97      0.90      0.93        30
+      Drought       0.90      0.90      0.90        29
+     Wildfire       0.94      0.94      0.94        31
+
+    accuracy                           0.94       320
+   macro avg       0.93      0.90      0.92       320
+weighted avg       0.94      0.94      0.94       320
+
+Model training complete! Check 'images/' for visualizations.
